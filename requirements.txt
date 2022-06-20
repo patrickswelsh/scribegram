@@ -1,0 +1,7 @@
+typing_extensions
+TgCrypto
+Pyrogram
+dotenv
+gspread
+google-api-python-client
+procrastinate
