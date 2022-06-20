@@ -1,2 +1,2 @@
 # scribegram
-Logs Telegram Messages in Google Sheets.
+Forwards Telegram Messages to Google Sheets.
