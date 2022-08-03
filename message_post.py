@@ -1,5 +1,5 @@
 import logging
-logging.basicConfig(format='%(asctime)s %(message)s',filename='db.log',level='INFO')
+logging.basicConfig(format='%(asctime)s %(message)s',level='ERROR')
 import time
 from multiprocessing.spawn import import_main_path
 from typing import Any
@@ -14,7 +14,7 @@ from googleapiclient import errors
 from googleapiclient.discovery import build
 from oauth2client import file as oauth_file, client as oauth_client, tools
 
-
+logging.getLogger("root").setLevel('ERROR')
 load_dotenv()
 
 ##Credentials and ID for the google sheet we're opening
@@ -56,6 +56,7 @@ else:
         connector=AiopgConnector(host=DBHOST, user=DBUSER, password=DBPASSWORD),
         worker_defaults={"delete_jobs": "always"}
     )
+
 app.open()
 
 
